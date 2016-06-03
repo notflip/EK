@@ -1,0 +1,18 @@
+{
+    "name": "notflip/ek",
+    "authors": [
+        {
+            "name": "Miguel Stevens",
+            "email": "hello@notflip.be"
+        }
+    ],
+    "require": {
+        "twig/twig": "^1.24",
+        "nesbot/carbon": "^1.21"
+    },
+    "autoload": {
+    	"psr-4": {
+      		"Notflip\\Ek\\": "src/"
+    	}
+    }
+}
