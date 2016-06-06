@@ -2,8 +2,11 @@ span.fui {
   margin-right: 10px; }
 
 span.label {
-  margin: auto 2px; }
+  margin: auto 0px; }
 
+i {
+  margin-right: 2px;
+}
 body {
   background: #eee; }
 

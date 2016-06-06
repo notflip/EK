@@ -9,8 +9,23 @@ class Match {
     private $matchday;
     private $hometeam;
     private $awayteam;
-    private $result;
+    private $homeScore;
+    private $awayScore;
     private $players;
+
+    public function getWinner()
+    {
+        if(new \DateTime($this->getDate()) < new \DateTime()) {
+            if($this->getHomeScore() > $this->getAwayScore()) {
+                return ["code" => $this->getHomeCode(), "name" => $this->getHometeam()];
+            } elseif($this->getHomeScore() == $this->getAwayScore()) {
+                return 'equal';
+            }
+            return ["code" => $this->getAwayCode(), "name" => $this->getAwayteam()];
+        }
+
+        return false;
+    }
 
     public function getDate()
     {
@@ -62,16 +77,6 @@ class Match {
         $this->awayteam = $awayteam;
     }
 
-    public function getResult()
-    {
-        return $this->result;
-    }
-
-    public function setResult($result)
-    {
-        $this->result = $result;
-    }
-
     public function getHomeCode()
     {
         return $this->homeCode;
@@ -91,6 +96,27 @@ class Match {
     {
         $this->awayCode = $awayCode;
     }
+
+    public function getHomeScore()
+    {
+        return $this->homeScore;
+    }
+
+    public function setHomeScore($homeScore)
+    {
+        $this->homeScore = $homeScore;
+    }
+
+    public function getAwayScore()
+    {
+        return $this->awayScore;
+    }
+
+    public function setAwayScore($awayScore)
+    {
+        $this->awayScore = $awayScore;
+    }
+
 
     public function getPlayers()
     {

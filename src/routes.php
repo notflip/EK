@@ -12,7 +12,6 @@ $app->get('/', function () use ($twig) {
         die($e->getMessage());
     }
 
-
     echo $twig->render('home.html', [
         'matches' => $matches->all()
     ]);

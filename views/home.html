@@ -5,22 +5,29 @@
     {% for match in matches %}
         <div class="row match">
             <div class="col col-md-4">
-                <h6>{{ match.getHomeTeam() }} - {{ match.getAwayTeam() }}</h6>
+                <h6>{% if(match.getWinner()) %}  {% endif %} {{ match.getHomeTeam() }} - {{ match.getAwayTeam() }}</h6>
                 {{ match.getDate()|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }}
+                {% if(match.getWinner()) %}
+                    <div class="text-success"><span class="glyphicon glyphicon-star"></span> {{ match.getWinner().name }}</div>
+                {% endif %}
             </div>
             <div class="col col-md-4">
                 {% if match.getPlayers()|length > 0 %}
-                    {% for player,score in match.getPlayers() %}
+                    {% for player in match.getPlayers() %}
                     <div class="block block-green">
-                        <h2>{{ score }}</h2>
-                        <p>{{ player }}</p>
+                        <h2>{{ player.getHomeScore() }}-{{ player.getAwayScore() }}</h2>
+                        <p>{{ player.getName() }}</p>
+                        {% autoescape false %}
+                            <p>{{ player.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>
+                        {% endautoescape %}
                     </div>
                     {% endfor %}
                 {% endif %}
+
             </div>
             <div class="col col-md-2 col-md-offset-2 col-nopadding">
                 <div class="block block-blue block-full">
-                    <h2>{{ match.getResult() }}</h2>
+                    <h2>{{ match.getHomeScore() }} - {{ match.getAwayScore }}</h2>
                     <small>{{ match.getHomeCode() }} - {{ match.getAwayCode() }}</small>
                 </div>
             </div>
