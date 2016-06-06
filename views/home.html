@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        {% for day, match in matches %}
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Matchdag {{ day }}</div>
+                    <ul class="list-group">
+                        {% for item in match %}
+                            <li class="list-group-item">
+                                <i class="glyphicon glyphicon-ok glyphicon-color-green"></i>
+                                {{ item.getHomeTeam() }} - {{ item.getAwayTeam() }}
+
+                                {% if item.getPlayers()|length > 0 %}
+                                    {% for player,score in item.getPlayers() %}
+                                    <span class="pull-right">
+                                        {{ player }} {{ score }}
+                                    </span>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <h3>{{ item.getResult() }} <span class="pull-right">{{ item.getDate() }}</span></h3>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+
+        {% endfor %}
+    </div>
+</div>
+

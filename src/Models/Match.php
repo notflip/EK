@@ -9,6 +9,7 @@ class Match {
     private $hometeam;
     private $awayteam;
     private $result;
+    private $players;
 
     public function getDate()
     {
@@ -80,6 +81,14 @@ class Match {
         $this->result = $result;
     }
 
+    public function getPlayers()
+    {
+        return $this->players;
+    }
 
+    public function setPlayers($players)
+    {
+        $this->players = $players;
+    }
 
 }

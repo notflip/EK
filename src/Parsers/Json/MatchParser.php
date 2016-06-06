@@ -5,9 +5,12 @@ use Notflip\Ek\Parsers\JsonParser;
 
 class MatchParser extends JsonParser {
 
+    private $players;
+
     public function parse($url)
     {
         $data = $this->fetch($url)->fixtures;
+        $this->players = $this->getPlayers();
 
         $items = [];
         foreach ($data as $item) {
@@ -19,6 +22,7 @@ class MatchParser extends JsonParser {
             $match->setHometeam($item->homeTeamName);
             $match->setAwayteam($item->awayTeamName);
             $match->setResult($this->generateResult($item->result));
+            $match->setPlayers($this->generatePlayers($match->getCode()));
             $items[$item->matchday][] = $match;
         }
 
@@ -26,6 +30,11 @@ class MatchParser extends JsonParser {
             throw new \Exception("No matches found");
         }
         return $items;
+    }
+
+    public function getPlayers()
+    {
+        return json_decode(file_get_contents('../data/players.json'), true);
     }
 
     public function generateCode($home, $away)
@@ -38,5 +47,10 @@ class MatchParser extends JsonParser {
         $home = $result->goalsHomeTeam == null ? 0 : $result->goalsHomeTeam;
         $away = $result->goalsAwayTeam == null ? 0 : $result->goalsAwayTeam;
         return $home . " - " . $away;
+    }
+
+    public function generatePlayers($code)
+    {
+        return isset($this->players[$code]) ? $this->players[$code] : null;
     }
 }
