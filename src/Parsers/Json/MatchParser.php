@@ -15,14 +15,15 @@ class MatchParser extends JsonParser {
         $items = [];
         foreach ($data as $item) {
             $match = new Match();
-            $match->setCode($this->generateCode($item->homeTeamName, $item->awayTeamName));
+            $match->setHomeCode($this->generateCode($item->homeTeamName));
+            $match->setAwayCode($this->generateCode($item->awayTeamName));
             $match->setDate($item->date);
             $match->setStatus($item->status);
             $match->setMatchday($item->matchday);
             $match->setHometeam($item->homeTeamName);
             $match->setAwayteam($item->awayTeamName);
             $match->setResult($this->generateResult($item->result));
-            $match->setPlayers($this->generatePlayers($match->getCode()));
+            $match->setPlayers($this->generatePlayers($match->getHomeCode(), $match->getAwayCode()));
             $items[$item->matchday][] = $match;
         }
 
@@ -37,9 +38,9 @@ class MatchParser extends JsonParser {
         return json_decode(file_get_contents('../data/players.json'), true);
     }
 
-    public function generateCode($home, $away)
+    public function generateCode($string)
     {
-        return strtoupper(substr($home,0,3) . "-" .substr($away,0,3));
+        return strtoupper(substr($string,0,3));
     }
 
     public function generateResult($result)
@@ -49,8 +50,9 @@ class MatchParser extends JsonParser {
         return $home . " - " . $away;
     }
 
-    public function generatePlayers($code)
+    public function generatePlayers($home, $away)
     {
+        $code = $home . "-" . $away;
         return isset($this->players[$code]) ? $this->players[$code] : null;
     }
 }

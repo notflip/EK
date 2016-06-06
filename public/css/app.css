@@ -1,4 +1,32 @@
-.glyphicon-color-green {color: #8cc152}
-i {margin-right: 10px;}
+span.fui {
+  margin-right: 10px; }
 
-.container, .container-fluid {margin: 50px auto}
+span.label {
+  margin: auto 2px; }
+
+body {
+  background: #eee; }
+
+/* Base */
+.match {
+  background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05); }
+
+.block {
+  float: left;
+  margin: 0 5px;
+  padding: 0 20px;
+  height: 100%; }
+  .block.block-green {
+    background: #2ecc71;
+    color: white; }
+  .block.block-blue {
+    background: #3498db;
+    color: white; }
+  .block.block-full {
+    width: 100%;
+    text-align: center; }
+
+/*# sourceMappingURL=app.css.map */

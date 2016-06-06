@@ -2,7 +2,8 @@
 
 class Match {
 
-    private $code;
+    private $homeCode;
+    private $awayCode;
     private $date;
     private $status;
     private $matchday;
@@ -61,16 +62,6 @@ class Match {
         $this->awayteam = $awayteam;
     }
 
-    public function getCode()
-    {
-        return $this->code;
-    }
-
-    public function setCode($code)
-    {
-        $this->code = $code;
-    }
-
     public function getResult()
     {
         return $this->result;
@@ -79,6 +70,26 @@ class Match {
     public function setResult($result)
     {
         $this->result = $result;
+    }
+
+    public function getHomeCode()
+    {
+        return $this->homeCode;
+    }
+
+    public function setHomeCode($homeCode)
+    {
+        $this->homeCode = $homeCode;
+    }
+
+    public function getAwayCode()
+    {
+        return $this->awayCode;
+    }
+
+    public function setAwayCode($awayCode)
+    {
+        $this->awayCode = $awayCode;
     }
 
     public function getPlayers()

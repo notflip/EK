@@ -1,0 +1,28 @@
+span.fui {
+  margin-right: 10px;
+}
+span.label {
+  margin: auto 2px;
+}
+
+body {
+  background:#eee;
+}
+/* Base */
+.match {
+  background: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05);
+}
+
+.block {
+  float: left;
+  margin: 0 5px;
+  padding: 0 20px;
+  height: 100%;
+
+  &.block-green {background: #2ecc71; color: white;}
+  &.block-blue {background: #3498db; color: white;}
+  &.block-full {width: 100%; text-align: center;}
+}
