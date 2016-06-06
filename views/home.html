@@ -8,7 +8,7 @@
                 <div class="row match">
                     <div class="col col-md-4">
                         <h6>{{ item.getHomeTeam() }} - {{ item.getAwayTeam() }}</h6>
-                        {{ item.getDate()|date("l m F Y H:i") }}
+                        {{ item.getDate()|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }}
                     </div>
                     <div class="col col-md-4">
                         {% if item.getPlayers()|length > 0 %}
@@ -23,7 +23,7 @@
                     <div class="col col-md-2 col-md-offset-2">
                         <div class="block block-blue block-full">
                             <h2>{{ item.getResult() }}</h2>
-                            <small>{{ item.getHomeTeam() }} - {{ item.getAwayTeam() }}</small>
+                            <small>{{ item.getHomeCode() }} - {{ item.getAwayCode() }}</small>
                         </div>
                     </div>
                 </div>
