@@ -8,7 +8,6 @@ use Carbon\Carbon;
 
 //$teamParser = new TeamParser();
 $matchParser = new MatchParser();
-
 try {
     //$teams = $teamParser->parse('http://api.football-data.org/v1/soccerseasons/424/teams');
     //$matches = $matchParser->parse('http://api.football-data.org/v1/soccerseasons/424/fixtures');
@@ -19,11 +18,11 @@ try {
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
 
-    <script src="/public/js/jquery-1.10.1.min.js"></script>
-    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/js/jquery-1.10.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 <body>
 
