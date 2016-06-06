@@ -10,6 +10,11 @@ class Player {
 
     public function getPoints($homeScore, $awayScore)
     {
+        // if the player's score is equal to the output score
+        if(($homeScore == $this->homeScore) && ($awayScore == $this->awayScore)) {
+            return "<span class=\"label label-success\"><i class=\"glyphicon glyphicon-star\"></i> 3</span>";
+        }
+
         // if both scores are equal to each other and equal to one another
         if(($homeScore == $awayScore) && ($this->homeScore == $this->awayScore)) {
             return "<span class=\"label label-success\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
@@ -17,11 +22,6 @@ class Player {
 
         if($homeScore < $awayScore && $this->homeScore < $this->awayScore) {
             return "<span class=\"label label-success\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        // if the player's score is equal to the output score
-        if(($homeScore == $this->homeScore) && ($awayScore == $this->awayScore)) {
-            return "<span class=\"label label-success\"><i class=\"glyphicon glyphicon-star\"></i> 3</span>";
         }
 
         return false;
