@@ -7,6 +7,14 @@ span.label {
 body {
   background: #eee; }
 
+.container-fluid {
+  max-width:1300px; }
+
+.col-nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Base */
 .match {
   background: white;
