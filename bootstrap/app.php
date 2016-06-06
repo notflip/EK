@@ -16,7 +16,7 @@ $loader = new Twig_Loader_Filesystem('../views');
 $twig = new Twig_Environment($loader);
 $twig->addExtension(new Twig_Extensions_Extension_Intl());
 
-require '../routes.php';
+require '../src/routes.php';
 
 // Run application
 $app->run();

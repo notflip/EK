@@ -23,8 +23,10 @@ class MatchParser extends JsonParser {
             $match->setHometeam($item->homeTeamName);
             $match->setAwayteam($item->awayTeamName);
             $match->setResult($this->generateResult($item->result));
+
             $match->setPlayers($this->generatePlayers($match->getHomeCode(), $match->getAwayCode()));
-            $items[$item->matchday][] = $match;
+
+            $items[] = $match;
         }
 
         if(empty($items)) {
