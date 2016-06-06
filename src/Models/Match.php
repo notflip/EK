@@ -13,9 +13,10 @@ class Match {
     private $awayScore;
     private $players;
 
+
     public function getWinner()
     {
-        if(new \DateTime($this->getDate()) < new \DateTime()) {
+        if($this->isPassed()) {
             if($this->getHomeScore() > $this->getAwayScore()) {
                 return ["code" => $this->getHomeCode(), "name" => $this->getHometeam()];
             } elseif($this->getHomeScore() == $this->getAwayScore()) {
@@ -25,6 +26,11 @@ class Match {
         }
 
         return false;
+    }
+
+    public function isPassed()
+    {
+        return new \DateTime($this->getDate()) < new \DateTime();
     }
 
     public function getDate()

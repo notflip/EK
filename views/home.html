@@ -17,9 +17,11 @@
                     <div class="block block-green">
                         <h2>{{ player.getHomeScore() }}-{{ player.getAwayScore() }}</h2>
                         <p>{{ player.getName() }}</p>
-                        {% autoescape false %}
-                            <p>{{ player.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>
-                        {% endautoescape %}
+                        {% if(match.passed()) %}
+                            {% autoescape false %}
+                                <p>{{ player.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>
+                            {% endautoescape %}
+                        {% endif %}
                     </div>
                     {% endfor %}
                 {% endif %}
