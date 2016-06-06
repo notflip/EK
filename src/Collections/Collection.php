@@ -2,4 +2,16 @@
 
 abstract class Collection {
 
+    protected $items;
+
+    public function __construct($items)
+    {
+        $this->items = $items;
+    }
+
+    public function all()
+    {
+        return $this->items;
+
+    }
 }

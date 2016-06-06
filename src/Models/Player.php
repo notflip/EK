@@ -27,16 +27,6 @@ class Player {
         return false;
     }
 
-    public function getBetTeam()
-    {
-        if($this->getHomeScore() > $this->getAwayScore()) {
-            return $this->getHomeCode();
-        } elseif($this->getHomeScore() == $this->getAwayScore()) {
-            return 'equal';
-        }
-        return $this->getAwayCode();
-    }
-
     public function getName()
     {
         return $this->name;
