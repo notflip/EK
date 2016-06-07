@@ -3,6 +3,15 @@
 
 <div class="container-fluid">
     <h3>EK 2016</h3>
+
+    {% if(players|length) > 0 %}
+        <table class="table">
+            {% for player in players.all() %}
+            <tr><td>{{ player.getName() }}</td><td>{{ player.getPoints() }}</td></tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+
     {% for match in matches %}
         <div class="row match">
             <div class="col col-md-3">

@@ -18,7 +18,6 @@ class MatchParser extends JsonParser {
         $data = $this->fetch($url)->fixtures;
         $players = $this->fetchPlayers();
 
-
         // Create a player object for each player
         foreach($players as $match => $item) {
             foreach($item as $name => $score) {
@@ -30,7 +29,6 @@ class MatchParser extends JsonParser {
                 }
             }
         }
-
 
         // Create a match object for each match
         $items = [];
@@ -47,7 +45,6 @@ class MatchParser extends JsonParser {
             $match->setAwayScore($item->result->goalsAwayTeam);
 
             $code = $match->getHomeCode() . "-" . $match->getAwayCode();
-
 
             // Add players to the bet if the player has a bet on this match
             foreach($players[$code] as $name => $score) {
