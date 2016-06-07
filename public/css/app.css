@@ -2,21 +2,14 @@ span.fui {
   margin-right: 10px; }
 
 span.label {
-  margin: auto 0px; }
+  margin: auto 2px; }
 
-i {
-  margin-right: 2px;
-}
 body {
   background: #eee; }
 
-.container-fluid {
-  max-width:1300px; }
-
-.col-nopadding {
-  padding-left: 0;
-  padding-right: 0;
-}
+section.section-blue {
+  background: #2C3E50;
+  color: white; }
 
 /* Base */
 .match {

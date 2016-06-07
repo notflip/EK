@@ -61,6 +61,7 @@ class MatchParser extends JsonParser {
                 $bets[$name] = $bet;
             }
 
+            $match->setBets($bets);
             $items[] = $match;
         }
 

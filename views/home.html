@@ -1,17 +1,23 @@
 {% extends "app.html" %}
 {% block content %}
 
-<div class="container-fluid">
-    <h3>EK 2016</h3>
 
-    {% if(players|length) > 0 %}
+
+<section class="section-blue">
+    <div class="container">
+        <h3>EK 2016</h3>
+        {% if(players|length) > 0 %}
         <table class="table">
             {% for player in players.all() %}
             <tr><td>{{ player.getName() }}</td><td>{{ player.getPoints() }}</td></tr>
             {% endfor %}
         </table>
-    {% endif %}
+        {% endif %}
+    </div>
+</section>
 
+
+<div class="container-fluid">
     {% for match in matches %}
         <div class="row match">
             <div class="col col-md-3">
@@ -22,11 +28,11 @@
                 {% endif %}
             </div>
             <div class="col col-md-7 col-nopadding">
-                {% if match.getPlayers()|length > 0 %}
-                    {% for player in match.getPlayers() %}
+                {% if match.getBets()|length > 0 %}
+                    {% for bet in match.getBets() %}
                     <div class="block block-green">
-                        <h2>{{ player.getHomeScore() }}-{{ player.getAwayScore() }}</h2>
-                        <p>{{ player.getName() }}</p>
+                        <h2>{{ bet.getScoreHome() }}-{{ bet.getScoreAway() }}</h2>
+                        <p>{{ bet.getPlayerName() }}</p>
                         {% if(match.passed()) %}
                             {% autoescape false %}
                                 <p>{{ player.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>

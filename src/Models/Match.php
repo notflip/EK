@@ -11,7 +11,7 @@ class Match {
     private $awayteam;
     private $homeScore;
     private $awayScore;
-    private $players;
+    private $bets;
 
     public function getWinner()
     {
@@ -122,15 +122,14 @@ class Match {
         $this->awayScore = $awayScore;
     }
 
-
-    public function getPlayers()
+    public function getBets()
     {
-        return $this->players;
+        return $this->bets;
     }
 
-    public function setPlayers($players)
+    public function setBets($bets)
     {
-        $this->players = $players;
+        $this->bets = $bets;
     }
 
 }
