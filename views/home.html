@@ -4,14 +4,14 @@
     <h3>EK 2016</h3>
     {% for match in matches %}
         <div class="row match">
-            <div class="col col-md-4">
+            <div class="col col-md-3">
                 <h6>{% if(match.getWinner()) %}  {% endif %} {{ match.getHomeTeam() }} - {{ match.getAwayTeam() }}</h6>
                 {{ match.getDate()|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }}
                 {% if(match.getWinner()) %}
                     <div class="text-success"><span class="glyphicon glyphicon-star"></span> {{ match.getWinner().name }}</div>
                 {% endif %}
             </div>
-            <div class="col col-md-4">
+            <div class="col col-md-7 col-nopadding">
                 {% if match.getPlayers()|length > 0 %}
                     {% for player in match.getPlayers() %}
                     <div class="block block-green">
@@ -27,7 +27,7 @@
                 {% endif %}
 
             </div>
-            <div class="col col-md-2 col-md-offset-2 col-nopadding">
+            <div class="col col-md-2 col-nopadding">
                 <div class="block block-blue block-full">
                     <h2>{{ match.getHomeScore() }} - {{ match.getAwayScore }}</h2>
                     <small>{{ match.getHomeCode() }} - {{ match.getAwayCode() }}</small>
