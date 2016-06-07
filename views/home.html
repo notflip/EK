@@ -35,7 +35,7 @@
                         <p>{{ bet.getPlayerName() }}</p>
                         {% if(match.passed()) %}
                             {% autoescape false %}
-                                <p>{{ player.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>
+                                <p>{{ bet.getPoints(match.getHomeScore(), match.getAwayScore()) }}</p>
                             {% endautoescape %}
                         {% endif %}
                     </div>

@@ -8,21 +8,29 @@ class Bet {
     private $scoreHome;
     private $scoreAway;
 
-    public function getPoints($homeScore, $awayScore)
+    public function getPoints($scoreHome, $scoreAway)
     {
         // if the player's score is equal to the output score
-        if(($homeScore == $this->homeScore) && ($awayScore == $this->awayScore)) {
+        if(($scoreHome == $this->scoreHome) && ($scoreAway == $this->scoreAway)) {
             return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 3</span>";
         }
 
-        // if both scores are equal to each other and equal to one another
-        if(($homeScore == $awayScore) && ($this->homeScore == $this->awayScore)) {
+        // if its a draw. and the player also has a draw
+        if(($scoreHome == $scoreAway) && ($this->scoreHome == $this->scoreAway)) {
             return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
         }
 
-        if($homeScore < $awayScore && $this->homeScore < $this->awayScore) {
+        // if the away team wins. and the player also has the away team winning regardless of score
+        if($scoreHome < $scoreAway && $this->scoreHome < $this->scoreAway) {
             return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
         }
+
+        // if the home team wins. and the player also has the home team winning regardless of score
+        if($scoreHome > $scoreAway && $this->scoreHome > $this->scoreAway) {
+            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
+        }
+
+        return false;
 
         return false;
     }

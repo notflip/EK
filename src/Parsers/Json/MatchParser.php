@@ -54,8 +54,8 @@ class MatchParser extends JsonParser {
 
                 $bet = new Bet();
                 $bet->setPlayerName($name);
-                $bet->setScoreHome($scores[0]);
-                $bet->setScoreAway($scores[1]);
+                $bet->setScoreHome((int)$scores[0]);
+                $bet->setScoreAway((int)$scores[1]);
                 $bet->setTeamHome($teams[0]);
                 $bet->setTeamAway($teams[1]);
                 $bets[$name] = $bet;
