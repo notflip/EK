@@ -12,12 +12,16 @@ abstract class Collection {
     public function all()
     {
         return $this->items;
-
     }
 
     public function has($name)
     {
         return isset($items[$name]);
+    }
+
+    public function find($name)
+    {
+        return isset($this->items[$name]) ? $this->items[$name] : null;
     }
 
     public function add($name, $item)

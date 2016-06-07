@@ -1,89 +1,74 @@
 <?php namespace Notflip\Ek\Models;
 
+
 class Bet {
 
-    private $playerName;
-    private $teamHome;
-    private $teamAway;
-    private $scoreHome;
-    private $scoreAway;
+    private $player;
+    private $points;
+    private $homeTeam;
+    private $awayTeam;
+    private $homeScore;
+    private $awayScore;
 
-    public function getPoints($scoreHome, $scoreAway)
+    public function getPlayer()
     {
-        // if the player's score is equal to the output score
-        if(($scoreHome == $this->scoreHome) && ($scoreAway == $this->scoreAway)) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 3</span>";
-        }
-
-        // if its a draw. and the player also has a draw
-        if(($scoreHome == $scoreAway) && ($this->scoreHome == $this->scoreAway)) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        // if the away team wins. and the player also has the away team winning regardless of score
-        if($scoreHome < $scoreAway && $this->scoreHome < $this->scoreAway) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        // if the home team wins. and the player also has the home team winning regardless of score
-        if($scoreHome > $scoreAway && $this->scoreHome > $this->scoreAway) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        return false;
-
-        return false;
+        return $this->player;
     }
 
-    public function getPlayerName()
+    public function setPlayer($player)
     {
-        return $this->playerName;
+        $this->player = $player;
     }
 
-    public function setPlayerName($playerName)
+    public function getPoints()
     {
-        $this->playerName = $playerName;
+        return $this->points;
     }
 
-    public function getTeamHome()
+    public function setPoints($points)
     {
-        return $this->teamHome;
+        $this->points = $points;
     }
 
-    public function setTeamHome($teamHome)
+    public function getHomeTeam()
     {
-        $this->teamHome = $teamHome;
+        return $this->homeTeam;
     }
 
-    public function getTeamAway()
+    public function setHomeTeam($homeTeam)
     {
-        return $this->teamAway;
+        $this->homeTeam = $homeTeam;
     }
 
-    public function setTeamAway($teamAway)
+    public function getAwayTeam()
     {
-        $this->teamAway = $teamAway;
+        return $this->awayTeam;
     }
 
-    public function getScoreHome()
+    public function setAwayTeam($awayTeam)
     {
-        return $this->scoreHome;
+        $this->awayTeam = $awayTeam;
     }
 
-    public function setScoreHome($scoreHome)
+
+    public function getHomeScore()
     {
-        $this->scoreHome = $scoreHome;
+        return $this->homeScore;
     }
 
-    public function getScoreAway()
+    public function setHomeScore($homeScore)
     {
-        return $this->scoreAway;
+        $this->homeScore = $homeScore;
     }
 
-    public function setScoreAway($scoreAway)
+    public function getAwayScore()
     {
-        $this->scoreAway = $scoreAway;
+        return $this->awayScore;
     }
 
+    public function setAwayScore($awayScore)
+    {
+        $this->awayScore = $awayScore;
+    }
 
 }

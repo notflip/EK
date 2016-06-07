@@ -1,26 +1,27 @@
 <?php
 use Notflip\Ek\Collections\MatchCollection;
 use Notflip\Ek\Collections\PlayerCollection;
+use Notflip\Ek\Matcher;
 use Notflip\Ek\Parsers\Json\MatchParser;
+use Notflip\Ek\Parsers\Json\PlayerParser;
 
 $app->get('/', function () use ($twig) {
 
     try {
-        //$matches = $matchParser->parse('http://api.football-data.org/v1/soccerseasons/424/fixtures');
-        $players = new PlayerCollection();
-        $matchParser = new MatchParser($players);
-        $matches = new MatchCollection($matchParser->parse('../data/data.json'));
+
+        $players = new PlayerCollection((new PlayerParser())->parse('../data/players.json'));
+        $matches = new MatchCollection((new MatchParser())->parse('../data/data.json'));
+
+        $matcher = new Matcher($players, $matches);
+        $matcher->check();
+
     } catch(JsonException $e) {
         die($e->getMessage());
     }
 
     echo $twig->render('home.html', [
         'matches' => $matches->all(),
-        'players' => $players
+        'players' => $players->all()
     ]);
 
-});
-
-$app->get('/update', function() {
-    // Add the update ajax functions
 });

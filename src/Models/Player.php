@@ -4,6 +4,12 @@ class Player {
 
     private $name;
     private $points;
+    private $bets;
+
+    public function __construct()
+    {
+        $this->setPoints(0);
+    }
 
     public function getName()
     {
@@ -24,5 +30,21 @@ class Player {
     {
         $this->points = $points;
     }
+
+    public function addPoints($points)
+    {
+        $this->setPoints($this->getPoints() + $points);
+    }
+
+    public function getBets()
+    {
+        return $this->bets;
+    }
+
+    public function setBets($bets)
+    {
+        $this->bets = $bets;
+    }
+
 
 }

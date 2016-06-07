@@ -13,17 +13,16 @@ class Match {
     private $awayScore;
     private $bets;
 
-    public function getWinner()
+    public function winner()
     {
         if($this->isPassed()) {
             if($this->getHomeScore() > $this->getAwayScore()) {
-                return ["code" => $this->getHomeCode(), "name" => $this->getHometeam()];
+                return $this->getHometeam();
             } elseif($this->getHomeScore() == $this->getAwayScore()) {
                 return 'equal';
             }
-            return ["code" => $this->getAwayCode(), "name" => $this->getAwayteam()];
+            return $this->getAwayteam();
         }
-
         return false;
     }
 
@@ -127,9 +126,15 @@ class Match {
         return $this->bets;
     }
 
+
     public function setBets($bets)
     {
         $this->bets = $bets;
+    }
+
+    public function addBet($bet)
+    {
+        $this->bets[] = $bet;
     }
 
 }

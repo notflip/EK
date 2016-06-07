@@ -2,4 +2,5 @@
 
 class MatchCollection extends Collection {
 
+
 }
