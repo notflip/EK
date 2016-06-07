@@ -1,18 +1,38 @@
 <?php namespace Notflip\Ek\Parsers\Json;
 
+use Notflip\Ek\Collections\PlayerCollection;
+use Notflip\Ek\Models\Bet;
 use Notflip\Ek\Models\Match;
 use Notflip\Ek\Models\Player;
 use Notflip\Ek\Parsers\JsonParser;
 
 class MatchParser extends JsonParser {
 
-    private $players;
+    public function __construct(PlayerCollection $players)
+    {
+        $this->players = $players;
+    }
 
     public function parse($url)
     {
         $data = $this->fetch($url)->fixtures;
-        $this->players = $this->fetchPlayers();
+        $players = $this->fetchPlayers();
 
+
+        // Create a player object for each player
+        foreach($players as $match => $item) {
+            foreach($item as $name => $score) {
+                if(!$this->players->has($name)) {
+                    $player = new Player();
+                    $player->setName($name);
+                    $player->setPoints(0);
+                    $this->players->add($name, $player);
+                }
+            }
+        }
+
+
+        // Create a match object for each match
         $items = [];
         foreach ($data as $item) {
             $match = new Match();
@@ -28,22 +48,22 @@ class MatchParser extends JsonParser {
 
             $code = $match->getHomeCode() . "-" . $match->getAwayCode();
 
-            $players = [];
-            foreach($this->players[$code] as $name => $score) {
+
+            // Add players to the bet if the player has a bet on this match
+            foreach($players[$code] as $name => $score) {
 
                 $scores = explode('-', $score);
                 $teams = explode('-', $code);
 
-                $player = new Player();
-                $player->setName($name);
-                $player->setHomeCode($teams[0]);
-                $player->setAwayCode($teams[1]);
-                $player->setHomeScore((int) $scores[0]);
-                $player->setAwayScore((int) $scores[1]);
-                $players[] = $player;
+                $bet = new Bet();
+                $bet->setPlayerName($name);
+                $bet->setScoreHome($scores[0]);
+                $bet->setScoreAway($scores[1]);
+                $bet->setTeamHome($teams[0]);
+                $bet->setTeamAway($teams[1]);
+                $bets[$name] = $bet;
             }
 
-            $match->setPlayers($players);
             $items[] = $match;
         }
 

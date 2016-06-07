@@ -4,7 +4,7 @@ abstract class Collection {
 
     protected $items;
 
-    public function __construct($items)
+    public function __construct($items = [])
     {
         $this->items = $items;
     }
@@ -13,5 +13,15 @@ abstract class Collection {
     {
         return $this->items;
 
+    }
+
+    public function has($name)
+    {
+        return isset($items[$name]);
+    }
+
+    public function add($name, $item)
+    {
+        $this->items[$name] = $item;
     }
 }

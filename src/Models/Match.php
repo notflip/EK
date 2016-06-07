@@ -13,7 +13,6 @@ class Match {
     private $awayScore;
     private $players;
 
-
     public function getWinner()
     {
         if($this->isPassed()) {

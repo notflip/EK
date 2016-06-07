@@ -3,29 +3,7 @@
 class Player {
 
     private $name;
-    private $homeCode;
-    private $awayCode;
-    private $homeScore;
-    private $awayScore;
-
-    public function getPoints($homeScore, $awayScore)
-    {
-        // if the player's score is equal to the output score
-        if(($homeScore == $this->homeScore) && ($awayScore == $this->awayScore)) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 3</span>";
-        }
-
-        // if both scores are equal to each other and equal to one another
-        if(($homeScore == $awayScore) && ($this->homeScore == $this->awayScore)) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        if($homeScore < $awayScore && $this->homeScore < $this->awayScore) {
-            return "<span class=\"label label-warning\"><i class=\"glyphicon glyphicon-star\"></i> 1</span>";
-        }
-
-        return false;
-    }
+    private $points;
 
     public function getName()
     {
@@ -37,46 +15,14 @@ class Player {
         $this->name = $name;
     }
 
-    public function getHomeCode()
+    public function getPoints()
     {
-        return $this->homeCode;
+        return $this->points;
     }
 
-    public function setHomeCode($homeCode)
+    public function setPoints($points)
     {
-        $this->homeCode = $homeCode;
+        $this->points = $points;
     }
-
-    public function getAwayCode()
-    {
-        return $this->awayCode;
-    }
-
-    public function setAwayCode($awayCode)
-    {
-        $this->awayCode = $awayCode;
-    }
-
-    public function getHomeScore()
-    {
-        return $this->homeScore;
-    }
-
-    public function setHomeScore($homeScore)
-    {
-        $this->homeScore = $homeScore;
-    }
-
-    public function getAwayScore()
-    {
-        return $this->awayScore;
-    }
-
-    public function setAwayScore($awayScore)
-    {
-        $this->awayScore = $awayScore;
-    }
-
-
 
 }
