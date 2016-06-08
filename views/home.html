@@ -32,7 +32,6 @@
                 {% for bet in match.bets %}
                 <div class="block block-green">
                     <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
-
                     <p>{{ bet.player }}</p>
                     {% if(bet.points) %}
                         {% autoescape false %}

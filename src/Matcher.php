@@ -26,12 +26,13 @@ class Matcher {
                 // If the bet is an existing match
                 if($match = $this->matches->find($code)) {
 
+                    $match->addBet($bet);
+
                     // Compare the player score with the match score if the match is passed
                     if($match->isPassed()) {
 
                         $points = $this->calculatePoints($match, $bet);
                         $bet->setPoints($points);
-                        $match->addBet($bet);
                         $player->addPoints($points);
 
                     }
