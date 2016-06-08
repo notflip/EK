@@ -34,12 +34,10 @@
                     <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
 
                     <p>{{ bet.player }}</p>
-                    {% if(match.passed) %}
-                        {% if(bet.points) %}
-                            {% autoescape false %}
-                                <p><span class="label label-warning"><i class="glyphicon glyphicon-star"></i> {{ bet.points }}</span></p>
-                            {% endautoescape %}
-                        {% endif %}
+                    {% if(bet.points) %}
+                        {% autoescape false %}
+                            <p><span class="label label-warning"><i class="glyphicon glyphicon-star"></i> {{ bet.points }}</span></p>
+                        {% endautoescape %}
                     {% endif %}
                 </div>
                 {% endfor %}
