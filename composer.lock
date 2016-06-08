@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc8d642f18dc2af00f3a9d0452d58012",
-    "content-hash": "cf71db8f782884ec878e99fcf7588078",
+    "hash": "b3eda31a8308ce71ff1fe4bc08d63842",
+    "content-hash": "b3b7054b5e8be1ab4ba12259b50181a3",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -123,6 +123,77 @@
                 "routing"
             ],
             "time": "2016-04-18 11:33:20"
+        },
+        {
+            "name": "phpfastcache/phpfastcache",
+            "version": "4.3.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPSocialNetwork/phpfastcache.git",
+                "reference": "348f765dbb426f5da1d009802ab496909e4ad691"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPSocialNetwork/phpfastcache/zipball/348f765dbb426f5da1d009802ab496909e4ad691",
+                "reference": "348f765dbb426f5da1d009802ab496909e4ad691",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
+                "ext-apc": "*",
+                "ext-mbstring": "*",
+                "ext-memcache": "*",
+                "ext-memcached": "*",
+                "ext-predis": "*",
+                "ext-redis": "*",
+                "ext-sqlite": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/phpFastCache/phpFastCache.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Khoa Bui",
+                    "email": "khoaofgod@gmail.com",
+                    "homepage": "http://www.phpfastcache.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Georges.L",
+                    "email": "contact@geolim4.com",
+                    "homepage": "https://github.com/Geolim4",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP Cache Class - Supported Redis, Cookie, Predis, APC, MemCached, WinCache, Files, PDO, Reduce mySQL Call by Caching",
+            "homepage": "http://www.phpfastcache.com",
+            "keywords": [
+                "APC Cache",
+                "apc",
+                "cache",
+                "cache class",
+                "caching",
+                "cookie",
+                "files cache",
+                "memcache",
+                "memcached",
+                "mysql cache",
+                "pdo cache",
+                "php cache",
+                "predis",
+                "redis",
+                "wincache"
+            ],
+            "time": "2016-05-17 22:29:47"
         },
         {
             "name": "pimple/pimple",

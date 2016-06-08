@@ -1,15 +1,23 @@
 <?php namespace Notflip\Ek\Parsers;
 
-use Notflip\Discount\Exceptions\JsonException;
+use phpFastCache\CacheManager;
 
 class JsonParser {
 
     public function fetch($url)
     {
+        $cache = CacheManager::Files();
+
         $reqPrefs['http']['method'] = 'GET';
         $reqPrefs['http']['header'] = 'X-Auth-Token: 67220319fa2649779057398d73a9d5cc';
         $stream_context = stream_context_create($reqPrefs);
-        $response = file_get_contents($url, false, $stream_context);
+
+        $response = $cache->get($url);
+        if(is_null($response)) {
+            $response = file_get_contents($url, false, $stream_context);
+            $cache->set($url, $response, 60);
+        }
+
         $data = json_decode($response);
 
         switch (json_last_error()) {
@@ -34,7 +42,7 @@ class JsonParser {
         }
 
         if($error) {
-            throw new JsonException("JSON data corrupt: " . $error);
+            throw new \Exception("JSON data corrupt: " . $error);
         }
         return $data;
     }

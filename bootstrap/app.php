@@ -1,18 +1,21 @@
 <?php
 
 require '../vendor/autoload.php';
+
+/* Caching */
+use phpFastCache\CacheManager;
+CacheManager::setup(["path" => "C:/tmp/"]);
+CacheManager::CachingMethod("phpfastcache");
+
+/* Locale */
 date_default_timezone_set('Europe/Brussels');
 setlocale(LC_ALL, 'be_NL');
 
-$configuration = [
-    'settings' => [
-        'displayErrorDetails' => true,
-    ],
-];
-
-$container = new \Slim\Container($configuration);
+/* Slim */
+$container = new \Slim\Container(['settings' => ['displayErrorDetails' => true]]);
 $app = new \Slim\App($container);
 
+/* Twig */
 $loader = new Twig_Loader_Filesystem('../views');
 $twig = new Twig_Environment($loader, ['debug' => true]);
 $twig->addExtension(new Twig_Extensions_Extension_Intl());
