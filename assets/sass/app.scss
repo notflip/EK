@@ -1,3 +1,5 @@
+$darkblue: #2C3E50;
+
 span.fui {
   margin-right: 10px;
 }
@@ -10,8 +12,14 @@ body {
 }
 
 section.section-blue {
-  background: #2C3E50;
+  background: $darkblue;
   color: white;
+
+  table {
+    td {
+      border-top: 1px solid lighten($darkblue, 10%);
+    }
+  }
 }
 
 /* Base */

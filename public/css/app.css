@@ -10,6 +10,8 @@ body {
 section.section-blue {
   background: #2C3E50;
   color: white; }
+  section.section-blue table td {
+    border-top: 1px solid #3e5871; }
 
 /* Base */
 .match {
