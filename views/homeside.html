@@ -16,7 +16,7 @@
             </table>
 
             <h6>Topscorers</h6>
-            <table class="table">
+            <table class="table topscorers">
                 {% for player in players|sortbyscore %}
                 <tr>
                     <td>{{ player.name|title }}</td>
@@ -29,33 +29,28 @@
         <div class="col-height col-lg-10 col-nopadding">
             {% for match in matches %}
             <div class="row match {% if not match.passed %} match-future {% endif %}">
-                <div class="col col-md-2 col-blue col-transparent">
-                    <div class="info">
-                        <div class="meta text-muted">
-                            {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }}
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h6><img width="25" src="{{ match.homeflag }}" /><span>{{ match.hometeam }}</span></h6>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h6><img width="25" src="{{ match.awayflag }}" /><span>{{ match.awayteam }}</span></h6>
-                            </div>
-                        </div>
-                    </div>
-                    {% if(match.winner) %}
-                    <div class="text-success"><span class="fa fa-star"></span> {{ match.winner }}</div>
-                    {% endif %}
-                </div>
-                <div class="col col-md-10 col-nopadding">
+                <div class="col col-md-12 col-nopadding">
                     {% if match.bets|length > 0 %}
-
                     <ul class="blocks">
-                        <li class="block block-blue">
-                            <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
-                            <small>{{ match.homecode }} - {{ match.awaycode }}</small>
+                        <li class="block block-team">
+                            <ul class="teams">
+                                <li class="team">
+                                    <h6><img width="25" src="{{ match.homeflag }}" /><span>{{ match.hometeam }}</span></h6>
+                                    {% if(match.passed) %}
+                                        <div class="score">
+                                            <h1>{{ match.homescore }}</h1>
+                                        </div>
+                                    {% endif %}
+                                </li>
+                                <li class="team">
+                                    <h6><img width="25" src="{{ match.awayflag }}" /><span>{{ match.awayteam }}</span></h6>
+                                    {% if(match.passed) %}
+                                        <div class="score">
+                                            <h1>{{ match.awayscore }}</h1>
+                                        </div>
+                                    {% endif %}
+                                </li>
+                            </ul>
                         </li>
                         {% for bet in match.bets %}
                         <li class="block {% if(bet.points) == 1 %} block-green-border {% elseif(bet.points == 3) %} block-green {% else %} block-default {% endif %}">

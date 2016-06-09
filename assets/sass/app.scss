@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-  background: #eee;
+  background: lighten(#2C3E50, 10%);
 }
 
 h6 {
@@ -30,17 +30,21 @@ h6 {
   background: $darkblue;
   h3, h6 {
     margin-left: 15px;
-    color: white;
+    color: lighten($darkblue, 80%);
+  }
+  h6 {
+    font-size: 18px;
+    margin-top: 50px;
   }
   table {
     tr:first-child {
-      background: lighten($darkblue, 5%);
+      background: lighten($darkblue, 20%);
     }
     td {
       padding: 5px 20px !important;
-      color: white;
+      color: lighten($darkblue, 60%);
       font-size: 16px;
-      border-color: lighten($darkblue, 10%) !important;
+      border-color: transparent !important;
     }
   }
 }
@@ -48,8 +52,9 @@ h6 {
 /* Medals */
 table.players {
   tr:nth-child(1) td:first-child:before {content: "\f0a3";font-family: FontAwesome; font-style: normal; font-weight: normal; color: gold; margin-right: 10px;}
-  tr:nth-child(2) td:first-child:before {content: "\f0a3";font-family: FontAwesome; font-style: normal; font-weight: normal; color: silver; margin-right: 10px;}
-  tr:nth-child(3) td:first-child:before {content: "\f0a3";font-family: FontAwesome; font-style: normal; font-weight: normal; color: #CD7F32; margin-right: 10px;}
+}
+
+table.players, table.topscorers {
   tr td:first-child:before {content: "\f0a3";font-family: FontAwesome; font-style: normal; font-weight: normal; color: lighten($darkblue, 10%); margin-right: 10px;}
 }
 
@@ -58,25 +63,49 @@ table.players {
   margin: 25px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
 
-  .info {
-    padding: 10px;
-    h6 span {
-      vertical-align: middle;
-      margin-left: 10px;
-    }
-    img {
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    }
-    .meta {
-      font-size: 14px;
-    }
-  }
-
   /* Match Passed */
   &.match-future {
     .block-green, .block-default, .block-blue {
       background: #ccc !important;
       color: #eee;
+    }
+  }
+}
+
+/* Team */
+.teams {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  background: #eee;
+}
+.team {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+  flex-grow: 1;
+  padding: 25px;
+  h5, h6 {
+    color: #666;
+    margin: 0 auto;
+  }
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 10px;
+  }
+
+  .score {
+    position: absolute;
+    background: rgba(200,200,200, 0.2);
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: rgba(100,100,100, 0.5);
+    h1 {
+      margin: 20px;
     }
   }
 }
@@ -95,9 +124,13 @@ table.players {
 
 .block {
   flex-grow: 1;
-
   padding: 10px 25px;
 
+  &.block-team {
+    padding: 0;
+    flex: 0 0;
+    flex-grow: 12;
+  }
   &.block-green {
     background: #2ecc71;
     color: white;
