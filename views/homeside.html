@@ -42,6 +42,7 @@
                         <li class="block block-team">
                             <ul class="teams">
                                 <li class="team">
+                                    {{ match.homeflag }}
                                     <h6><img class="flag" width="25" src="{{ match.homeflag }}" /><span>{{ match.hometeam }}</span></h6>
                                     {% if(match.passed) %}
                                         <div class="score">
