@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-height col-lg-2 col-sidebar">
+        <div class="col-height col-lg-2 col-nopadding col-sidebar">
             <h3>EK 2016</h3>
             {% if(players|length) > 0 %}
             <table class="table players">
@@ -39,27 +39,27 @@
                     <div class="text-success"><span class="fa fa-star"></span> {{ match.winner }}</div>
                     {% endif %}
                 </div>
-                <div class="col col-md-8 col-nopadding">
+                <div class="col col-md-10 col-nopadding">
                     {% if match.bets|length > 0 %}
-                    {% for bet in match.bets %}
-                    <div class="block {% if(bet.points) == 1 %} block-green-border {% elseif(bet.points == 3) %} block-green {% else %} block-default {% endif %}">
-                        <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
-                        <p>{{ bet.player }}</p>
-                        {% if(bet.points) %}
-                        {% autoescape false %}
-                        <p><span class="label"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
-                        {% endautoescape %}
-                        {% endif %}
-                    </div>
-                    {% endfor %}
-                    {% endif %}
 
-                </div>
-                <div class="col col-md-2 col-nopadding">
-                    <div class="block block-blue block-full">
-                        <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
-                        <small>{{ match.homecode }} - {{ match.awaycode }}</small>
-                    </div>
+                    <ul class="blocks">
+                        {% for bet in match.bets %}
+                        <li class="block {% if(bet.points) == 1 %} block-green-border {% elseif(bet.points == 3) %} block-green {% else %} block-default {% endif %}">
+                            <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
+                            <p>{{ bet.player }}</p>
+                            {% if(bet.points) %}
+                            {% autoescape false %}
+                            <p><span class="label"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
+                            {% endautoescape %}
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                        <li class="block block-blue">
+                            <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
+                            <small>{{ match.homecode }} - {{ match.awaycode }}</small>
+                        </li>
+                    </ul>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}

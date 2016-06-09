@@ -22,12 +22,13 @@ h6 {
 .col-sidebar {
   background: #2C3E50; }
   .col-sidebar h3 {
+    margin-left: 15px;
     color: white; }
   .col-sidebar table tr:first-child {
     background: #354b60; }
   .col-sidebar table td {
     color: white;
-    border-color: #1a252f !important; }
+    border-color: #3e5871 !important; }
 
 /* Medals */
 table.players tr:nth-child(1) td:first-child:before {
@@ -36,28 +37,28 @@ table.players tr:nth-child(1) td:first-child:before {
   font-style: normal;
   font-weight: normal;
   color: gold;
-  margin-right: 10px; }
+  margin: 0 10px; }
 table.players tr:nth-child(2) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: silver;
-  margin-right: 10px; }
+  margin: 0 10px; }
 table.players tr:nth-child(3) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: #CD7F32;
-  margin-right: 10px; }
+  margin: 0 10px; }
 table.players tr td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: #3e5871;
-  margin-right: 10px; }
+  margin: 0 10px; }
 
 .match {
   background: white;
@@ -73,29 +74,39 @@ table.players tr td:first-child:before {
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
     .match .info .meta {
       font-size: 14px; }
-  .match.match-future .block-green, .match.match-future .block-blue {
-    background: #ccc !important; }
+  .match.match-future .block-green, .match.match-future .block-default, .match.match-future .block-blue {
+    background: #ccc !important;
+    color: #eee; }
+
+/* Blocks */
+.blocks {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-flow: row;
+  align-items: stretch; }
 
 .block {
-  float: left;
-  margin: 0 2px;
-  padding: 0 20px;
-  height: 100%; }
+  flex-grow: 1;
+  padding: 10px 25px; }
   .block.block-green {
-    background: linear-gradient(to bottom, #2ecc71 1%, #00eaa4 100%);
+    background: #2ecc71;
     color: white; }
     .block.block-green .label {
       background: white !important;
-      color: #2ecc71; }
+      color: #166035; }
   .block.block-green-border {
-    background: #2ecc71;
+    background: linear-gradient(to bottom, #2ecc71 0%, #75eaa6 100%);
     color: white; }
     .block.block-green-border .label {
       background: white !important;
       color: #2ecc71; }
   .block.block-default {
-    background: #3498db;
-    color: white; }
+    background: #75EAA6;
+    color: #b7f4d1; }
   .block.block-blue {
     background: #3498db;
     color: white; }
