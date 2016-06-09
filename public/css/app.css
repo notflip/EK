@@ -61,6 +61,12 @@ table.players tr td:first-child:before, table.topscorers tr td:first-child:befor
     background: #ccc !important;
     color: #eee; }
 
+.meta {
+  padding: 0 20px;
+  background: #2C3E50;
+  font-size: 14px;
+  color: #aabed1; }
+
 /* Team */
 .teams {
   display: flex;

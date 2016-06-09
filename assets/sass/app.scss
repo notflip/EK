@@ -72,6 +72,12 @@ table.players, table.topscorers {
   }
 }
 
+.meta {
+  padding: 0 20px;
+  background: $darkblue;
+  font-size: 14px;
+  color: lighten($darkblue, 50%);
+}
 /* Team */
 .teams {
   display: flex;

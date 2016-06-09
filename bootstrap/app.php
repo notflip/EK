@@ -9,7 +9,6 @@ CacheManager::CachingMethod("phpfastcache");
 
 /* Locale */
 date_default_timezone_set('Europe/Brussels');
-setlocale(LC_ALL, 'be_NL');
 
 /* Slim */
 $container = new \Slim\Container(['settings' => ['displayErrorDetails' => true]]);

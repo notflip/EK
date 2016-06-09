@@ -10,7 +10,7 @@ $app->get('/', function () use ($twig) {
     try {
 
         $players = new PlayerCollection((new PlayerParser())->parse('../data/players.json'));
-        $matches = new MatchCollection((new MatchParser())->parse('../data/data.json'));
+        $matches = new MatchCollection((new MatchParser())->parse('http://api.football-data.org/v1/soccerseasons/424/fixtures'));
 
         $matcher = new Matcher($players, $matches);
         $matcher->check();
