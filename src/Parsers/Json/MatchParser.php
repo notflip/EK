@@ -13,8 +13,9 @@ class MatchParser extends JsonParser {
         $items = [];
         foreach ($data as $item) {
 
-            $hometeam = $this->fetch($item->_links->homeTeam->href);
-            $awayteam = $this->fetch($item->_links->awayTeam->href);
+            $teams = $this->fetch($item->_links);
+            $hometeam = $teams->hometeam->href;
+            $awayteam = $teams->awayTeam->href;
 
             $code = $this->generateCode($item->homeTeamName) . "-" . $this->generateCode($item->awayTeamName);
             $match = new Match();
