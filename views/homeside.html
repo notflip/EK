@@ -4,7 +4,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-height col-sm-5 col-lg-3 col-nopadding col-sidebar">
-            <h3>EK 2016</h3>
+            <div class="intro">
+                <h3>EK 2016</h3>
+                <p><a target="_blank" href="https://github.com/notflip/EK">Fork me on <i class="fa fa-github"></i> Github</a></p>
+            </div>
+
             {% if(players|length) > 0 %}
             <table class="table players">
                 {% for player in players|sortbyscore %}

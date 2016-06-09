@@ -21,9 +21,12 @@ h6 {
 /* Base */
 .col-sidebar {
   background: #2C3E50; }
-  .col-sidebar h3, .col-sidebar h6 {
-    margin-left: 15px;
-    color: white; }
+  .col-sidebar .intro {
+    padding: 20px; }
+    .col-sidebar .intro a {
+      color: #aabed1; }
+    .col-sidebar .intro h3, .col-sidebar .intro h6 {
+      color: white; }
   .col-sidebar h6 {
     font-size: 18px;
     margin-top: 50px; }

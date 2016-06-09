@@ -27,11 +27,17 @@ h6 {
 
 /* Base */
 .col-sidebar {
-  background: $darkblue;
-  h3, h6 {
-    margin-left: 15px;
-    color: lighten($darkblue, 80%);
+  .intro {
+    a {
+      color: lighten($darkblue, 50%);
+    }
+    padding: 20px;
+    h3, h6 {
+      color: lighten($darkblue, 80%);
+    }
   }
+  background: $darkblue;
+
   h6 {
     font-size: 18px;
     margin-top: 50px;
