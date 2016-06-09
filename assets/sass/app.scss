@@ -74,13 +74,13 @@ table.players, table.topscorers {
 
 /* Team */
 .teams {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   flex-flow: column nowrap;
   align-items: stretch;
+  list-style: none;
   background: #eee;
 }
 .team {
@@ -129,7 +129,7 @@ table.players, table.topscorers {
   &.block-team {
     padding: 0;
     flex: 0 0;
-    flex-grow: 12;
+    flex-grow: 35;
   }
   &.block-green {
     background: #2ecc71;
@@ -154,4 +154,35 @@ table.players, table.topscorers {
   &.block-orange {}
   &.block-blue {background: #3498db; color: white;}
   &.block-full {width: 100%; text-align: center;}
+}
+
+/* Queries */
+@media only screen and (max-width : 1600px) {
+  .flag {
+    display: none;
+  }
+  .teams {
+    flex-flow: row;
+    .team {
+      .score {
+        position: relative;
+        background: transparent;
+      }
+    }
+  }
+  .blocks {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width : 1600px) {
+}
+
+@media only screen and (max-width : 1700px) {
+  .blocks {
+    .block-team {
+      background: red;
+      flex-grow: 100 !important;
+    }
+  }
 }
