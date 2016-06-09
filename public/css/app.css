@@ -21,7 +21,7 @@ h6 {
 /* Base */
 .col-sidebar {
   background: #2C3E50; }
-  .col-sidebar h3 {
+  .col-sidebar h3, .col-sidebar h6 {
     margin-left: 15px;
     color: white; }
   .col-sidebar table tr:first-child {

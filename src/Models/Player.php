@@ -5,6 +5,7 @@ class Player {
     private $name;
     private $points;
     private $bets;
+    private $topscorer;
 
     public function __construct()
     {
@@ -46,5 +47,14 @@ class Player {
         $this->bets = $bets;
     }
 
+    public function getTopscorer()
+    {
+        return $this->topscorer;
+    }
+
+    public function setTopscorer($topscorer)
+    {
+        $this->topscorer = $topscorer;
+    }
 
 }

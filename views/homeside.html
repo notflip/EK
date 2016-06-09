@@ -14,6 +14,16 @@
                 </tr>
                 {% endfor %}
             </table>
+
+            <h6>Topscorers</h6>
+            <table class="table">
+                {% for player in players|sortbyscore %}
+                <tr>
+                    <td>{{ player.name|title }}</td>
+                    <td>{{ player.topscorer }}</td>
+                </tr>
+                {% endfor %}
+            </table>
             {% endif %}
         </div>
         <div class="col-height col-lg-10 col-nopadding">

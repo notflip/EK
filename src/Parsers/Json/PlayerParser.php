@@ -11,14 +11,14 @@ class PlayerParser extends JsonParser {
         $raw = $this->fetch($url);
 
         $items = [];
-        foreach ($raw as $name => $userbets) {
+        foreach ($raw as $name => $data) {
 
             $player = new Player();
             $player->setName($name);
-
+            $player->setTopScorer($data->extra->topscorer);
             $bets = [];
 
-            foreach($userbets as $team => $score) {
+            foreach($data->scores as $team => $score) {
 
                 $teams = explode('-', $team);
                 $scores = explode('-', $score);
