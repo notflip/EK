@@ -27,7 +27,9 @@ h6 {
   .col-sidebar table tr:first-child {
     background: #354b60; }
   .col-sidebar table td {
+    padding: 5px 20px !important;
     color: white;
+    font-size: 16px;
     border-color: #3e5871 !important; }
 
 /* Medals */
@@ -37,28 +39,28 @@ table.players tr:nth-child(1) td:first-child:before {
   font-style: normal;
   font-weight: normal;
   color: gold;
-  margin: 0 10px; }
+  margin-right: 10px; }
 table.players tr:nth-child(2) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: silver;
-  margin: 0 10px; }
+  margin-right: 10px; }
 table.players tr:nth-child(3) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: #CD7F32;
-  margin: 0 10px; }
+  margin-right: 10px; }
 table.players tr td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: #3e5871;
-  margin: 0 10px; }
+  margin-right: 10px; }
 
 .match {
   background: white;
@@ -97,7 +99,7 @@ table.players tr td:first-child:before {
     color: white; }
     .block.block-green .label {
       background: white !important;
-      color: #166035; }
+      color: #2ecc71; }
   .block.block-green-border {
     background: linear-gradient(to bottom, #2ecc71 0%, #75eaa6 100%);
     color: white; }

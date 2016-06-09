@@ -53,6 +53,10 @@
                     {% if match.bets|length > 0 %}
 
                     <ul class="blocks">
+                        <li class="block block-blue">
+                            <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
+                            <small>{{ match.homecode }} - {{ match.awaycode }}</small>
+                        </li>
                         {% for bet in match.bets %}
                         <li class="block {% if(bet.points) == 1 %} block-green-border {% elseif(bet.points == 3) %} block-green {% else %} block-default {% endif %}">
                             <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
@@ -64,10 +68,6 @@
                             {% endif %}
                         </li>
                         {% endfor %}
-                        <li class="block block-blue">
-                            <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
-                            <small>{{ match.homecode }} - {{ match.awaycode }}</small>
-                        </li>
                     </ul>
                     {% endif %}
                 </div>
