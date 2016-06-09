@@ -18,7 +18,7 @@
         </div>
         <div class="col-height col-lg-10 col-nopadding">
             {% for match in matches %}
-            <div class="row match">
+            <div class="row match {% if not match.passed %} match-future {% endif %}">
                 <div class="col col-md-2 col-blue col-transparent">
                     <div class="info">
                         <div class="meta text-muted">
@@ -42,12 +42,12 @@
                 <div class="col col-md-8 col-nopadding">
                     {% if match.bets|length > 0 %}
                     {% for bet in match.bets %}
-                    <div class="block block-green">
+                    <div class="block {% if(bet.points) == 1 %} block-green-border {% elseif(bet.points == 3) %} block-green {% else %} block-default {% endif %}">
                         <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
                         <p>{{ bet.player }}</p>
                         {% if(bet.points) %}
                         {% autoescape false %}
-                        <p><span class="label label-warning"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
+                        <p><span class="label"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
                         {% endautoescape %}
                         {% endif %}
                     </div>

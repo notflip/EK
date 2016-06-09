@@ -62,7 +62,8 @@ table.players tr td:first-child:before {
 .match {
   background: white;
   margin: 25px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  /* Match Passed */ }
   .match .info {
     padding: 10px; }
     .match .info h6 span {
@@ -72,6 +73,8 @@ table.players tr td:first-child:before {
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
     .match .info .meta {
       font-size: 14px; }
+  .match.match-future .block-green, .match.match-future .block-blue {
+    background: #ccc !important; }
 
 .block {
   float: left;
@@ -79,7 +82,19 @@ table.players tr td:first-child:before {
   padding: 0 20px;
   height: 100%; }
   .block.block-green {
+    background: linear-gradient(to bottom, #2ecc71 1%, #00eaa4 100%);
+    color: white; }
+    .block.block-green .label {
+      background: white !important;
+      color: #2ecc71; }
+  .block.block-green-border {
     background: #2ecc71;
+    color: white; }
+    .block.block-green-border .label {
+      background: white !important;
+      color: #2ecc71; }
+  .block.block-default {
+    background: #3498db;
     color: white; }
   .block.block-blue {
     background: #3498db;

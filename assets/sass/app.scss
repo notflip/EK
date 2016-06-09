@@ -68,6 +68,13 @@ table.players {
       font-size: 14px;
     }
   }
+
+  /* Match Passed */
+  &.match-future {
+    .block-green, .block-blue {
+      background: #ccc !important;
+    }
+  }
 }
 
 .block {
@@ -76,7 +83,27 @@ table.players {
   padding: 0 20px;
   height: 100%;
 
-  &.block-green {background: #2ecc71; color: white;}
+  &.block-green {
+    background: linear-gradient(to bottom, #2ecc71 1%,#00eaa4 100%);
+    color: white;
+    .label {
+      background: white !important;
+      color: #2ecc71;
+    }
+  }
+  &.block-green-border {
+    background: #2ecc71;
+    color: white;
+    .label {
+      background: white !important;
+      color: #2ecc71;
+    }
+  }
+  &.block-default {
+    background: #3498db;
+    color: white;
+  }
+  &.block-orange {}
   &.block-blue {background: #3498db; color: white;}
   &.block-full {width: 100%; text-align: center;}
 }
