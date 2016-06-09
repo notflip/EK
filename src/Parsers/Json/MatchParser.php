@@ -13,9 +13,6 @@ class MatchParser extends JsonParser {
         $items = [];
         foreach ($data as $item) {
 
-            $hometeam = $this->fetch($item->_links->homeTeam->href);
-            $awayteam = $this->fetch($item->_links->awayTeam->href);
-
             $code = $this->generateCode($item->homeTeamName) . "-" . $this->generateCode($item->awayTeamName);
             $match = new Match();
             $match->setDate($item->date);
@@ -23,8 +20,6 @@ class MatchParser extends JsonParser {
             $match->setMatchday($item->matchday);
             $match->setHometeam($item->homeTeamName);
             $match->setAwayteam($item->awayTeamName);
-            $match->setHomeFlag($hometeam->crestUrl);
-            $match->setAwayFlag($awayteam->crestUrl);
             $match->setHomeCode($this->generateCode($item->homeTeamName));
             $match->setAwayCode($this->generateCode($item->awayTeamName));
             $match->setHomeScore($item->result->goalsHomeTeam);

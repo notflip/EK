@@ -42,7 +42,7 @@
                         <li class="block block-team">
                             <ul class="teams">
                                 <li class="team">
-                                    <h6><img class="flag" width="25" src="{{ match.homeflag }}" /><span>{{ match.hometeam }}</span></h6>
+                                    <h6><img class="flag" width="25" src="/img/flags/{{ match.homecode }}.svg" /><span>{{ match.hometeam }}</span></h6>
                                     {% if(match.passed) %}
                                         <div class="score">
                                             <h1>{{ match.homescore }}</h1>
@@ -50,7 +50,7 @@
                                     {% endif %}
                                 </li>
                                 <li class="team">
-                                    <h6><img class="flag" width="25" src="{{ match.awayflag }}" /><span>{{ match.awayteam }}</span></h6>
+                                    <h6><img class="flag" width="25" src="img/flags/{{ match.awaycode }}.svg" /><span>{{ match.awayteam }}</span></h6>
                                     {% if(match.passed) %}
                                         <div class="score">
                                             <h1>{{ match.awayscore }}</h1>
