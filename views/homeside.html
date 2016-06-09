@@ -1,0 +1,69 @@
+{% extends "app.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-height col-lg-2 col-sidebar">
+            <h3>EK 2016</h3>
+            {% if(players|length) > 0 %}
+            <table class="table players">
+                {% for player in players|sortbyscore %}
+                <tr>
+                    <td>{{ player.name|title }}</td>
+                    <td>{{ player.points }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+        </div>
+        <div class="col-height col-lg-10 col-nopadding">
+            {% for match in matches %}
+            <div class="row match">
+                <div class="col col-md-2 col-blue col-transparent">
+                    <div class="info">
+                        <div class="meta text-muted">
+                            {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }}
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h6><img width="25" src="{{ match.homeflag }}" /><span>{{ match.hometeam }}</span></h6>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h6><img width="25" src="{{ match.awayflag }}" /><span>{{ match.awayteam }}</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    {% if(match.winner) %}
+                    <div class="text-success"><span class="fa fa-star"></span> {{ match.winner }}</div>
+                    {% endif %}
+                </div>
+                <div class="col col-md-8 col-nopadding">
+                    {% if match.bets|length > 0 %}
+                    {% for bet in match.bets %}
+                    <div class="block block-green">
+                        <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
+                        <p>{{ bet.player }}</p>
+                        {% if(bet.points) %}
+                        {% autoescape false %}
+                        <p><span class="label label-warning"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
+                        {% endautoescape %}
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+
+                </div>
+                <div class="col col-md-2 col-nopadding">
+                    <div class="block block-blue block-full">
+                        <h2>{{ match.homescore }} - {{ match.awayscore }}</h2>
+                        <small>{{ match.homecode }} - {{ match.awaycode }}</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

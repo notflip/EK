@@ -7,21 +7,23 @@ class Match {
     private $date;
     private $status;
     private $matchday;
-    private $hometeam;
-    private $awayteam;
+    private $homeTeam;
+    private $awayTeam;
     private $homeScore;
     private $awayScore;
+    private $homeFlag;
+    private $awayFlag;
     private $bets;
 
     public function winner()
     {
         if($this->isPassed()) {
             if($this->getHomeScore() > $this->getAwayScore()) {
-                return $this->getHometeam();
+                return $this->getHomeTeam();
             } elseif($this->getHomeScore() == $this->getAwayScore()) {
                 return 'equal';
             }
-            return $this->getAwayteam();
+            return $this->getAwayTeam();
         }
         return false;
     }
@@ -61,24 +63,24 @@ class Match {
         $this->matchday = $matchday;
     }
 
-    public function getHometeam()
+    public function getHomeTeam()
     {
-        return $this->hometeam;
+        return $this->homeTeam;
     }
 
-    public function setHometeam($hometeam)
+    public function setHomeTeam($hometeam)
     {
-        $this->hometeam = $hometeam;
+        $this->homeTeam = $hometeam;
     }
 
-    public function getAwayteam()
+    public function getAwayTeam()
     {
-        return $this->awayteam;
+        return $this->awayTeam;
     }
 
-    public function setAwayteam($awayteam)
+    public function setAwayTeam($awayteam)
     {
-        $this->awayteam = $awayteam;
+        $this->awayTeam = $awayteam;
     }
 
     public function getHomeCode()
@@ -121,11 +123,30 @@ class Match {
         $this->awayScore = $awayScore;
     }
 
+    public function getHomeFlag()
+    {
+        return $this->homeFlag;
+    }
+
+    public function setHomeFlag($homeFlag)
+    {
+        $this->homeFlag = $homeFlag;
+    }
+
+    public function getAwayFlag()
+    {
+        return $this->awayFlag;
+    }
+
+    public function setAwayFlag($awayFlag)
+    {
+        $this->awayFlag = $awayFlag;
+    }
+
     public function getBets()
     {
         return $this->bets;
     }
-
 
     public function setBets($bets)
     {

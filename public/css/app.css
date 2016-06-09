@@ -4,25 +4,78 @@ span.fui {
 span.label {
   margin: auto 2px; }
 
+html, body {
+  width: 100%;
+  height: 100%; }
+
 body {
   background: #eee; }
 
-section.section-blue {
-  background: #2C3E50;
-  color: white; }
-  section.section-blue table td {
-    border-top: 1px solid #3e5871; }
+h6 {
+  font-size: 22px; }
+
+.col-nopadding {
+  padding-left: 0;
+  padding-right: 0; }
 
 /* Base */
+.col-sidebar {
+  background: #2C3E50; }
+  .col-sidebar h3 {
+    color: white; }
+  .col-sidebar table tr:first-child {
+    background: #354b60; }
+  .col-sidebar table td {
+    color: white;
+    border-color: #1a252f !important; }
+
+/* Medals */
+table.players tr:nth-child(1) td:first-child:before {
+  content: "\f0a3";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: gold;
+  margin-right: 10px; }
+table.players tr:nth-child(2) td:first-child:before {
+  content: "\f0a3";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: silver;
+  margin-right: 10px; }
+table.players tr:nth-child(3) td:first-child:before {
+  content: "\f0a3";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: #CD7F32;
+  margin-right: 10px; }
+table.players tr td:first-child:before {
+  content: "\f0a3";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: #3e5871;
+  margin-right: 10px; }
+
 .match {
   background: white;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.05); }
+  margin: 25px;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1); }
+  .match .info {
+    padding: 10px; }
+    .match .info h6 span {
+      vertical-align: middle;
+      margin-left: 10px; }
+    .match .info img {
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25); }
+    .match .info .meta {
+      font-size: 14px; }
 
 .block {
   float: left;
-  margin: 0 5px;
+  margin: 0 2px;
   padding: 0 20px;
   height: 100%; }
   .block.block-green {

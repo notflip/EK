@@ -19,7 +19,7 @@ $app->get('/', function () use ($twig) {
         die($e->getMessage());
     }
 
-    echo $twig->render('home.html', [
+    echo $twig->render('homeside.html', [
         'matches' => $matches->all(),
         'players' => $players->all()
     ]);
