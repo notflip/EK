@@ -64,9 +64,9 @@
                             <h2>{{ bet.homescore }}-{{ bet.awayscore }}</h2>
                             <p>{{ bet.player }}</p>
                             {% if(bet.points) %}
-                            {% autoescape false %}
-                            <p><span class="label"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
-                            {% endautoescape %}
+                                {% autoescape false %}
+                                    <p><span class="label"><i class="fa fa-star"></i> {{ bet.points }}</span></p>
+                                {% endautoescape %}
                             {% endif %}
                         </li>
                         {% endfor %}

@@ -29,7 +29,9 @@ h6 {
       color: white; }
   .col-sidebar h6 {
     font-size: 18px;
-    margin-top: 50px; }
+    margin-top: 50px;
+    margin-left: 20px;
+    color: white; }
   .col-sidebar table tr:first-child {
     background: #507192; }
   .col-sidebar table td {
