@@ -167,7 +167,6 @@ table.players tr td:first-child:before, table.topscorers tr td:first-child:befor
     flex-wrap: wrap; } }
 @media only screen and (max-width: 1700px) {
   .blocks .block-team {
-    background: red;
     flex-grow: 100 !important; } }
 
 /*# sourceMappingURL=app.css.map */
