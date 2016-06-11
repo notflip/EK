@@ -41,7 +41,7 @@ h6 {
     border-color: transparent !important; }
 
 /* Medals */
-table.players tr:nth-child(1) td:first-child:before,  table.topscorers tr:nth-child(7) td:first-child:before {
+table.players tr:nth-child(1) td:first-child:before,  table.topscorers tr:nth-child(6) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
