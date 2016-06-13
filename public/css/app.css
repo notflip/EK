@@ -41,20 +41,12 @@ h6 {
     border-color: transparent !important; }
 
 /* Medals */
-table.players tr:nth-child(1) td:first-child:before,  table.topscorers tr:nth-child(5) td:first-child:before {
+table.players tr:nth-child(1) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: gold;
-  margin-right: 10px; }
-  
-table.players tr:nth-child(2) td:first-child:before {
-  content: "\f0a3";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  color: silver;
   margin-right: 10px; }
 
 table.players tr td:first-child:before, table.topscorers tr td:first-child:before {
@@ -126,6 +118,8 @@ table.players tr td:first-child:before, table.topscorers tr td:first-child:befor
 .block {
   flex-grow: 1;
   padding: 10px 25px; }
+  .block h2 {
+    font-size: 42px; }
   .block.block-team {
     padding: 0;
     flex: 0 0;
@@ -167,6 +161,7 @@ table.players tr td:first-child:before, table.topscorers tr td:first-child:befor
     flex-wrap: wrap; } }
 @media only screen and (max-width: 1700px) {
   .blocks .block-team {
+    background: red;
     flex-grow: 100 !important; } }
 
 /*# sourceMappingURL=app.css.map */

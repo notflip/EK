@@ -139,6 +139,10 @@ table.players, table.topscorers {
   flex-grow: 1;
   padding: 10px 25px;
 
+  h2 {
+    font-size: 42px;
+  }
+
   &.block-team {
     padding: 0;
     flex: 0 0;
