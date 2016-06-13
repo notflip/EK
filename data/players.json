@@ -42,7 +42,7 @@
       "topscorer": "Lukaku"
     }
   },
-  "dennis": {
+  "shannon": {
     "scores": {
       "FRA-ROM": "2-0",
       "ALB-SWI": "1-1",
@@ -82,10 +82,10 @@
       "ITA-REP": "0-0"
     },
     "extra": {
-      "topscorer": "C. Ronaldo"
+      "topscorer": "Muller"
     }
   },
-  "shannon": {
+  "dennis": {
     "scores": {
       "FRA-ROM": "2-0",
       "ALB-SWI": "0-2",
@@ -125,7 +125,7 @@
       "ITA-REP": "4-1"
     },
     "extra": {
-      "topscorer": "Muller"
+      "topscorer": "C. Ronaldo"
     }
   },
   "jos": {
@@ -298,6 +298,92 @@
     },
     "extra": {
       "topscorer": "Giroud"
+    }
+  },
+  "seppe": {
+    "scores": {
+      "FRA-ROM": "3-0",
+      "ALB-SWI": "0-1",
+      "WAL-SLO": "1-0",
+      "ENG-RUS": "1-0",
+      "TUR-CRO": "0-1",
+      "POL-NOR": "1-0",
+      "GER-UKR": "2-0",
+      "SPA-CZE": "2-0",
+      "REP-SWE": "0-1",
+      "BEL-ITA": "2-1",
+      "AUS-HUN": "0-0",
+      "POR-ICE": "1-0",
+      "RUS-SLO": "1-0",
+      "ROM-SWI": "0-0",
+      "FRA-ALB": "2-0",
+      "ENG-WAL": "2-0",
+      "UKR-NOR": "1-0",
+      "GER-POL": "0-1",
+      "ITA-SWE": "3-0",
+      "CZE-CRO": "2-1",
+      "SPA-TUR": "3-1",
+      "BEL-REP": "2-0",
+      "ICE-HUN": "2-0",
+      "POR-AUS": "1-0",
+      "ROM-ALB": "0-0",
+      "SWI-FRA": "0-1",
+      "SLO-ENG": "0-2",
+      "RUS-WAL": "1-1",
+      "UKR-POL": "0-1",
+      "NOR-GER": "0-2",
+      "CZE-TUR": "0-1",
+      "CRO-SPA": "0-4",
+      "ICE-AUS": "1-1",
+      "HUN-POR": "1-2",
+      "SWE-BEL": "1-2",
+      "ITA-REP": "2-0"
+    },
+    "extra": {
+      "topscorer": "Griezmann"
+    }
+  },
+  "jo": {
+    "scores": {
+      "FRA-ROM": "3-1",
+      "ALB-SWI": "0-2",
+      "WAL-SLO": "2-0",
+      "ENG-RUS": "3-1",
+      "TUR-CRO": "2-2",
+      "POL-NOR": "1-0",
+      "GER-UKR": "3-0",
+      "SPA-CZE": "4-1",
+      "REP-SWE": "1-2",
+      "BEL-ITA": "3-2",
+      "AUS-HUN": "1-0",
+      "POR-ICE": "3-2",
+      "RUS-SLO": "1-0",
+      "ROM-SWI": "0-1",
+      "FRA-ALB": "2-0",
+      "ENG-WAL": "2-0",
+      "UKR-NOR": "0-1",
+      "GER-POL": "3-2",
+      "ITA-SWE": "2-0",
+      "CZE-CRO": "2-2",
+      "SPA-TUR": "3-1",
+      "BEL-REP": "2-0",
+      "ICE-HUN": "2-1",
+      "POR-AUS": "4-1",
+      "ROM-ALB": "1-0",
+      "SWI-FRA": "1-1",
+      "SLO-ENG": "0-1",
+      "RUS-WAL": "2-2",
+      "UKR-POL": "0-1",
+      "NOR-GER": "2-5",
+      "CZE-TUR": "1-2",
+      "CRO-SPA": "0-1",
+      "ICE-AUS": "2-1",
+      "HUN-POR": "0-1",
+      "SWE-BEL": "3-4",
+      "ITA-REP": "2-1"
+    },
+    "extra": {
+      "topscorer": "Muller"
     }
   }
 }
