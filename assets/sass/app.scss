@@ -77,14 +77,22 @@ table.players, table.topscorers {
       color: #eee;
     }
   }
+
+  /* Match First */
+  &.match-first {
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .meta {
   padding: 0 20px;
   background: $darkblue;
-  font-size: 14px;
+  font-size: 16px;
   color: lighten($darkblue, 50%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
 /* Team */
 .teams {
   display: flex;
