@@ -167,6 +167,7 @@ table.players, table.topscorers {
   &.block-default {
     background: #75EAA6;
     color: lighten(#75EAA6, 15%);
+    min-height: 200px;
   }
   &.block-orange {}
   &.block-blue {background: #3498db; color: white;}

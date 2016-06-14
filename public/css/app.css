@@ -138,7 +138,8 @@ table.players tr td:first-child:before, table.topscorers tr td:first-child:befor
       color: #2ecc71; }
   .block.block-default {
     background: #75EAA6;
-    color: #b7f4d1; }
+    color: #b7f4d1;
+    min-height: 200px; }
   .block.block-blue {
     background: #3498db;
     color: white; }
