@@ -41,12 +41,20 @@ h6 {
     border-color: transparent !important; }
 
 /* Medals */
-table.players tr:nth-child(1) td:first-child:before {
+table.players tr:nth-child(1) td:first-child:before, table.topscorers tr:nth-child(5) td:first-child:before {
   content: "\f0a3";
   font-family: FontAwesome;
   font-style: normal;
   font-weight: normal;
   color: gold;
+  margin-right: 10px; }
+  
+table.players tr:nth-child(2) td:first-child:before {
+  content: "\f0a3";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  color: silver;
   margin-right: 10px; }
 
 table.players tr td:first-child:before, table.topscorers tr td:first-child:before {
