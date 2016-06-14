@@ -30,12 +30,12 @@ class Match {
 
     public function isPassed()
     {
-        return new \DateTime($this->getDate()) < new \DateTime();
+        return $this->getDate() < new \DateTime();
     }
 
     public function getDate()
     {
-        return $this->date;
+        return new \DateTime($this->date);
     }
 
     public function setDate($date)
