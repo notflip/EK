@@ -36,8 +36,7 @@
             <div class="row match {% if not match.passed %} match-future {% endif %} {% if loop.first %} match-first {% endif %}">
                 <div class="col col-md-12 col-nopadding">
                     <div class="meta">
-                        {% if loop.first %} <strong>Upcoming Match</strong> {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc H:mm") }} {% endif %}
-                        {% if loop.index == 2 %} <strong>Last Played Match</strong> {% endif %}
+                        {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc H:mm") }}
                     </div>
                     {% if match.bets|length > 0 %}
                     <ul class="blocks">
