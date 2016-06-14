@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 
 /* Caching */
 use phpFastCache\CacheManager;
-CacheManager::setup(["path" => "C:/tmp/"]);
+CacheManager::setup(["path" => "/views/cache"]);
 CacheManager::CachingMethod("phpfastcache");
 
 /* Locale */
