@@ -21,7 +21,7 @@ $app->get('/', function () use ($twig) {
     }
 
     echo $twig->render('home.html', [
-        'matches' => $matches->all(),
+        'matches' => $matches->byClosest(),
         'players' => $players->all()
     ]);
 
