@@ -15,6 +15,7 @@ $app->get('/', function () use ($twig) {
         $matcher = new Matcher($players, $matches);
         $matcher->check();
 
+
     } catch(JsonException $e) {
         die($e->getMessage());
     }
