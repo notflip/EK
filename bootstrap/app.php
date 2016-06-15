@@ -4,6 +4,12 @@ require '../vendor/autoload.php';
 
 /* Caching */
 use phpFastCache\CacheManager;
+
+CacheManager::setup([
+    "storage" => "files",
+    "path" => "/storage/cache/",
+]);
+
 CacheManager::CachingMethod("phpfastcache");
 
 /* Locale */
