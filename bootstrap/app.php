@@ -10,8 +10,6 @@ CacheManager::setup([
     "path" => "/storage/cache/",
 ]);
 
-CacheManager::CachingMethod("phpfastcache");
-
 /* Locale */
 date_default_timezone_set('Europe/Brussels');
 
