@@ -7,7 +7,7 @@ use phpFastCache\CacheManager;
 
 CacheManager::setup([
     "storage" => "files",
-    "path" => "/storage/cache/",
+    "path" => "../storage/cache/",
 ]);
 
 /* Locale */
