@@ -4,30 +4,32 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-height col-sm-5 col-lg-2 col-nopadding col-sidebar">
-            <div class="intro">
-                <h3>EK 2016</h3><p><a target="_blank" href="https://github.com/notflip/EK">Fork me on <i class="fa fa-github"></i> Github</a></p>
+            <div class="col-fixed">
+                <div class="intro">
+                    <h3>EK 2016</h3><p><a target="_blank" href="https://github.com/notflip/EK">Fork me on <i class="fa fa-github"></i> Github</a></p>
+                </div>
+
+                {% if(players|length) > 0 %}
+                <table class="table players">
+                    {% for player in players|sortbyscore %}
+                    <tr>
+                        <td>{{ player.name|title }}</td>
+                        <td>{{ player.points }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <h6>Topscorers</h6>
+                <table class="table topscorers">
+                    {% for player in players|sort %}
+                    <tr>
+                        <td>{{ player.name|title }}</td>
+                        <td>{{ player.topscorer }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+                {% endif %}
             </div>
-
-            {% if(players|length) > 0 %}
-            <table class="table players">
-                {% for player in players|sortbyscore %}
-                <tr>
-                    <td>{{ player.name|title }}</td>
-                    <td>{{ player.points }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-
-            <h6>Topscorers</h6>
-            <table class="table topscorers">
-                {% for player in players|sort %}
-                <tr>
-                    <td>{{ player.name|title }}</td>
-                    <td>{{ player.topscorer }}</td>
-                </tr>
-                {% endfor %}
-            </table>
-            {% endif %}
         </div>
         <div class="col-height col-sm-7 col-lg-10 col-nopadding">
             {% for match in matches %}
@@ -36,8 +38,9 @@
             <div class="row match {% if not match.passed %} match-future {% endif %} {% if loop.first %} match-first {% endif %}">
                 <div class="col col-md-12 col-nopadding">
                     <div class="meta">
-                        {% if loop.first %} <strong>Upcoming Match</strong> {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc H:mm") }} {% endif %}
-                        {% if loop.index == 2 %} <strong>Last Played Match</strong> {% endif %}
+                        {% if loop.first %} <strong>Upcoming Match</strong> {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc H:mm") }}
+                        {% elseif(loop.index == 2) %} <strong>Last Played Match</strong>
+                        {% else %} {{ match.date|localizeddate('none', 'none', 'nl_NL', null, "cccc d MMMM Y H:mm") }} {% endif %}
                     </div>
                     {% if match.bets|length > 0 %}
                     <ul class="blocks">
