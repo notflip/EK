@@ -251,7 +251,22 @@
       "ICE-AUS": "0-2",
       "HUN-POR": "0-3",
       "SWE-BEL": "1-1",
-      "ITA-REP": "3-0"
+      "ITA-REP": "3-0",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "3-0",
+      "CRO-POR": "0-0",
+      "FRA-IRE": "2-0",
+      "GER-SLO": "2-1",
+      "HUN-BEL": "0-0",
+      "ITA-SPA": "1-1",
+      "ENG-ICE": "2-1",
+      "SWI-POR": "0-0",
+      "WAL-BEL": "1-1",
+      "GER-ITA": "0-0",
+      "FRA-ENG": "1-1",
+      "POR-BEL": "1-1",
+      "GER-FRA": "1-2",
+      "BEL-FRA": "1-1"      
     },
     "extra": {
       "topscorer": "Griezmann"
@@ -298,7 +313,7 @@
       "SWI-POL": "1-1",
       "WAL-NOR": "1-0",
       "CRO-POR": "2-2",
-      "FRA-IER": "2-0",
+      "FRA-IRE": "2-0",
       "GER-SLO": "3-0",
       "HUN-BEL": "0-2",
       "ITA-SPA": "0-0",
