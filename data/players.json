@@ -36,7 +36,22 @@
       "ICE-AUS": "0-0",
       "HUN-POR": "2-2",
       "SWE-BEL": "1-3",
-      "ITA-REP": "2-1"
+      "ITA-REP": "2-1",
+      "SWI-POL": "1-2",
+      "WAL-NOR": "2-0",
+      "CRO-POR": "1-1",
+      "FRA-REP": "2-0",
+      "GER-SLO": "2-0",
+      "HUN-BEL": "1-2",
+      "ITA-SPA": "3-1",
+      "ENG-ICE": "1-0",
+      "POL-CRO": "1-2",
+      "WAL-BEL": "1-3",
+      "GER-ITA": "2-1",
+      "FRA-ENG": "3-1",
+      "CRO-BEL": "0-2",
+      "GER-FRA": "2-2",
+      "BEL-GER": "1-3"
     },
     "extra": {
       "topscorer": "Lukaku"
@@ -79,7 +94,22 @@
       "ICE-AUS": "2-2",
       "HUN-POR": "0-0",
       "SWE-BEL": "1-2",
-      "ITA-REP": "0-0"
+      "ITA-REP": "0-0",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "1-0",
+      "CRO-POR": "1-1",
+      "FRA-REP": "2-0",
+      "GER-SLO": "2-0",
+      "HUN-BEL": "0-1",
+      "ITA-SPA": "0-0",
+      "ENG-ICE": "1-0",
+      "POL-CRO": "0-3",
+      "WAL-BEL": "0-2",
+      "GER-SPA": "1-2",
+      "FRA-ENG": "2-1",
+      "CRO-BEL": "0-1",
+      "SPA-FRA": "0-1",
+      "BEL-FRA": "1-0"
     },
     "extra": {
       "topscorer": "Muller"
@@ -122,7 +152,22 @@
       "ICE-AUS": "0-3",
       "HUN-POR": "0-3",
       "SWE-BEL": "0-1",
-      "ITA-REP": "4-1"
+      "ITA-REP": "4-1",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "1-0",
+      "CRO-POR": "2-2",
+      "FRA-REP": "2-0",
+      "GER-SLO": "3-0",
+      "HUN-BEL": "0-2",
+      "ITA-SPA": "0-0",
+      "ENG-ICE": "1-1",
+      "SWI-CRO": "0-2",
+      "WAL-BEL": "0-2",
+      "GER-SPA": "3-1",
+      "FRA-ICE": "1-0",
+      "CRO-BEL": "0-0",
+      "GER-FRA": "1-1",
+      "BEL-FRA": "1-0"
     },
     "extra": {
       "topscorer": "C. Ronaldo"
@@ -165,7 +210,22 @@
       "ICE-AUS": "0-1",
       "HUN-POR": "1-3",
       "SWE-BEL": "1-2",
-      "ITA-REP": "2-1"
+      "ITA-REP": "2-1",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "1-0",
+      "CRO-POR": "2-2",
+      "FRA-REP": "2-0",
+      "GER-SLO": "3-0",
+      "HUN-BEL": "0-2",
+      "ITA-SPA": "0-0",
+      "ENG-ICE": "1-1",
+      "SWI-CRO": "0-2",
+      "WAL-BEL": "0-2",
+      "GER-SPA": "3-1",
+      "FRA-ICE": "1-0",
+      "CRO-BEL": "0-0",
+      "GER-FRA": "1-1",
+      "BEL-FRA": "1-0"
     },
     "extra": {
       "topscorer": "Vardy"
@@ -208,7 +268,22 @@
       "ICE-AUS": "2-1",
       "HUN-POR": "1-7",
       "SWE-BEL": "1-3",
-      "ITA-REP": "2-0"
+      "ITA-REP": "2-0",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "1-0",
+      "CRO-POR": "2-2",
+      "FRA-REP": "2-0",
+      "GER-SLO": "3-0",
+      "HUN-BEL": "0-2",
+      "ITA-SPA": "0-0",
+      "ENG-ICE": "1-1",
+      "SWI-CRO": "0-2",
+      "WAL-BEL": "0-2",
+      "GER-SPA": "3-1",
+      "FRA-ICE": "1-0",
+      "CRO-BEL": "0-0",
+      "GER-FRA": "1-1",
+      "BEL-FRA": "1-0"
     },
     "extra": {
       "topscorer": "Muller"
@@ -410,7 +485,22 @@
       "ICE-AUS": "2-1",
       "HUN-POR": "0-1",
       "SWE-BEL": "3-4",
-      "ITA-REP": "2-1"
+      "ITA-REP": "2-1",
+      "SWI-POL": "1-1",
+      "WAL-NOR": "1-0",
+      "CRO-POR": "2-2",
+      "FRA-REP": "2-0",
+      "GER-SLO": "3-0",
+      "HUN-BEL": "0-2",
+      "ITA-SPA": "0-0",
+      "ENG-ICE": "1-1",
+      "SWI-CRO": "0-2",
+      "WAL-BEL": "0-2",
+      "GER-SPA": "3-1",
+      "FRA-ICE": "1-0",
+      "CRO-BEL": "0-0",
+      "GER-FRA": "1-1",
+      "BEL-FRA": "1-0"
     },
     "extra": {
       "topscorer": "Muller"
