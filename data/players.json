@@ -506,4 +506,13 @@
       "topscorer": "Muller"
     }
   }
+},
+  "geen uitslag": {
+    "scores": {
+      "POL-POR": "-"
+    },
+    "extra": {
+      "topscorer": "Muller"
+    }
+  }
 }
